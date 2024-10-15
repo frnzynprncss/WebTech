@@ -14,10 +14,14 @@ body {
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #5d4238;
+}
+
+.navbar div {
+    margin-inline: 1em;
+    align-items: center;
 }
 
 .navbar .logo {
@@ -25,7 +29,7 @@ body {
     font-weight: bold;
     color: white;
     display: flex;
-    align-items: center;
+    align-content: center;
 }
 
 .navbar .logo img {
