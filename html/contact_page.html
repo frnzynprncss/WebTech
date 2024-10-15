@@ -9,72 +9,9 @@
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: linear-gradient(
-                rgba(194, 160, 134, 0.9), 
-                rgba(194, 160, 134, 0.9)
-            ), 
-            url('images/logooo.png') no-repeat center center;
-            background-size: 50%;
-            background-attachment: fixed;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: rgba(93, 66, 56, 0.9);
-        }
-
-        .navbar .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar .logo img {
-            width: 30%;
-            max-width: 150px;
-            margin-right: 10px;
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        .navbar ul li a {
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            padding-bottom: 5px;
-            transition: color 0.3s, border-bottom 0.3s;
-        }
-
-        .navbar ul li a:hover,
-        .navbar ul li a.active {
-            color: #e2cfbe;
-            border-bottom: 2px solid #e2cfbe;
-        }
-
-        h2 {
-            text-align: center;
-            color: #5d4238;
-            margin: 50px 0;
-        }
-
         /* Contact Form Styles */
         .contact-form {
             display: flex;
@@ -149,24 +86,6 @@
             background-color: #d5b9a4;
             transform: scale(1.05);
         }
-
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 15px;
-            }
-
-            .navbar ul {
-                gap: 15px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .contact-form {
-                margin: 20px;
-            }
-        }
     </style>
 </head>
 
@@ -179,9 +98,9 @@
             <span>BingeVerse</span>
         </div>
         <ul>
-            <li><a href="new_homepage.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="myweb_about.html">About</a></li>
-            <li><a href="new_contact.html" class="active">Contact Us</a></li>
+            <li><a href="contact_page.html" class="active">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -195,7 +114,7 @@
 
     <!-- Centered Back to Home Button -->
     <div class="button-container">
-        <a href="new_homepage.html" class="back-home">Back to Home</a>
+        <a href="index.html" class="back-home">Back to Home</a>
     </div>
 
     <!-- SweetAlert2 JS -->
