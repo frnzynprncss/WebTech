@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - BingeVerse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(
+                rgba(194, 160, 134, 0.9), 
+                rgba(194, 160, 134, 0.9)
+            ), url('images/logooo.png') no-repeat center center;
+            background-size: 40%;
+            background-attachment: fixed;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgba(93, 66, 56, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar .logo img {
+            width: 30%;
+            max-width: 150px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: #e2cfbe;
+            border-bottom: 2px solid #e2cfbe;
+        }
+
+        /* About Section */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 60px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-container h2 {
+            color: #5d4238;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .about-container p {
+            color: #5d4238;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        /* Centered Back to Home Button */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .back-home {
+            padding: 10px 25px;
+            background-color: #e2cfbe;
+            color: #5d4238;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .back-home:hover {
+            background-color: #d5b9a4;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-container {
+                width: 90%;
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logooo.png" alt="BingeVerse Logo">
+            <span>BingeVerse</span>
+        </div>
+        <ul>
+            <li><a href="new_homepage.html">Home</a></li>
+            <li><a href="myweb_about.html" class="active">About</a></li>
+            <li><a href="contact_page.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <h2>About BingeVerse</h2>
+        <p>
+            Welcome to BingeVerse, your go-to platform for discovering the best in K-Dramas, C-Dramas, and Movies! 
+            We are dedicated to providing you with curated lists, reviews, and the latest news in the entertainment world.
+        </p>
+        <p>
+            Our mission is to help you find your next favorite show or movie and make your binge-watching experience even more enjoyable.
+        </p>
+    </div>
+
+    <!-- Centered Back to Home Button -->
+    <div class="button-container">
+        <a href="new_homepage.html" class="back-home">Back to Home</a>
+    </div>
+
+</body>
+</html>

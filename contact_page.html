@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BingeVerse</title>
+    
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(
+                rgba(194, 160, 134, 0.9), 
+                rgba(194, 160, 134, 0.9)
+            ), 
+            url('images/logooo.png') no-repeat center center;
+            background-size: 50%;
+            background-attachment: fixed;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(93, 66, 56, 0.9);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 30%;
+            max-width: 150px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            padding-bottom: 5px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: #e2cfbe;
+            border-bottom: 2px solid #e2cfbe;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5d4238;
+            margin: 50px 0;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #5d4238;
+            box-shadow: 0 0 8px rgba(93, 66, 56, 0.3);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            padding: 15px 30px;
+            background-color: #5d4238;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e2cfbe;
+            color: #5d4238;
+            transform: scale(1.05);
+        }
+
+        /* Centered Back to Home Button */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .back-home {
+            padding: 10px 25px;
+            background-color: #e2cfbe;
+            color: #5d4238;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .back-home:hover {
+            background-color: #d5b9a4;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+
+            .navbar ul {
+                gap: 15px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-form {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logooo.png" alt="BingeVerse Logo">
+            <span>BingeVerse</span>
+        </div>
+        <ul>
+            <li><a href="new_homepage.html">Home</a></li>
+            <li><a href="myweb_about.html">About</a></li>
+            <li><a href="new_contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <h2>Contact Us</h2>
+    <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <!-- Centered Back to Home Button -->
+    <div class="button-container">
+        <a href="new_homepage.html" class="back-home">Back to Home</a>
+    </div>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Form submission handling with SweetAlert
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from reloading the page
+
+            // Display SweetAlert confirmation
+            Swal.fire({
+                title: 'Message Sent!',
+                text: 'Thank you for reaching out. We will get back to you soon.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+
+            // Reset form after showing the alert
+            e.target.reset();
+        });
+    </script>
+
+</body>
+
+</html>

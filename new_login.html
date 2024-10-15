@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BingeVerse</title>
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(
+                rgba(194, 160, 134, 0.9), 
+                rgba(194, 160, 134, 0.9)
+            ),
+            url('images/logooo.png') no-repeat center center;
+            background-size: 50%;
+            background-attachment: fixed;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(93, 66, 56, 0.9);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 30%;
+            max-width: 150px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            padding-bottom: 5px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: #e2cfbe;
+            border-bottom: 2px solid #e2cfbe;
+        }
+
+        /* Login Form Styles */
+        .login-form {
+            margin: auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .login-form button {
+            padding: 15px;
+            background-color: #5d4238;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .login-form button:hover {
+            background-color: #e2cfbe;
+            color: #5d4238;
+        }
+
+        /* Centered Back to Home Button */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .back-home {
+            padding: 10px 25px;
+            background-color: #e2cfbe;
+            color: #5d4238;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .back-home:hover {
+            background-color: #d5b9a4;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logooo.png" alt="BingeVerse Logo">
+            <span>BingeVerse</span>
+        </div>
+        <ul>
+            <li><a href="new_homepage.html">Home</a></li>
+            <li><a href="myweb_about.html">About</a></li>
+            <li><a href="new_contact.html">Contact Us</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+    <!-- Centered Back to Home Button -->
+    <div class="button-container">
+        <a href="new_homepage.html" class="back-home">Back to Home</a>
+    </div>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // Form submission handling with SweetAlert
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from reloading the page
+
+            // Display SweetAlert confirmation
+            Swal.fire({
+                title: 'Login Successful!',
+                text: 'Welcome back to BingeVerse!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to the homepage when the user clicks 'OK'
+                    window.location.href = 'new_homepage.html';
+                }
+            });
+
+            // Reset form after showing the alert
+            e.target.reset();
+        });
+    </script>
+
+</body>
+
+</html>
