@@ -11,7 +11,9 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="../images/logooo.png" alt="BingeVerse Logo">
+            <a href="index.html">
+                <img src="../images/logooo.png" alt="BingeVerse Logo">
+            </a>
             <span>BingeVerse</span>
         </div>
 
@@ -84,43 +86,41 @@
             </div>
         </div>
     </div>
-</body>
-</html>
     
     <!-- Cast & Credits Section -->
-<div class="cast-credits">
-    <div class="section-header">
-        <h2>Cast & Credits</h2>
-        <button class="add-cast-btn">Add Cast</button>
+    <div class="cast-credits">
+        <div class="section-header">
+            <h2>Cast & Credits</h2>
+            <button class="add-cast-btn">Add Cast</button>
+        </div>
+        <div class="cast-list">
+            <div class="cast-card">
+                <img src="../images/kangjoon.jpg" alt="Seo Kang Joon">
+                <p><strong>Seo Kang Joon</strong><br>Nam Shin<br><span>Main Role</span></p>
+            </div>
+            <div class="cast-card">
+                <img src="../images/seungyeon.jpg" alt="Gong Seung Yeon">
+                <p><strong>Gong Seung Yeon</strong><br>Kang So Bong<br><span>Main Role</span></p>
+            </div>
+            <div class="cast-card">
+                <img src="../images/joonhyuk.jpg" alt="Lee Joon Hyuk">
+                <p><strong>Lee Joon Hyuk</strong><br>Ji Young Hoon<br><span>Main Role</span></p>
+            </div>
+            <div class="cast-card">
+                <img src="../images/park hwan hee.jpg" alt="Park Hwan Hee">
+                <p><strong>Park Hwan Hee</strong><br>Seo Ye Na<br><span>Support Role</span></p>
+            </div>
+        </div>
     </div>
-    <div class="cast-list">
-        <div class="cast-card">
-            <img src="../images/kangjoon.jpg" alt="Seo Kang Joon">
-            <p><strong>Seo Kang Joon</strong><br>Nam Shin<br><span>Main Role</span></p>
-        </div>
-        <div class="cast-card">
-            <img src="../images/seungyeon.jpg" alt="Gong Seung Yeon">
-            <p><strong>Gong Seung Yeon</strong><br>Kang So Bong<br><span>Main Role</span></p>
-        </div>
-        <div class="cast-card">
-            <img src="../images/joonhyuk.jpg" alt="Lee Joon Hyuk">
-            <p><strong>Lee Joon Hyuk</strong><br>Ji Young Hoon<br><span>Main Role</span></p>
-        </div>
-        <div class="cast-card">
-            <img src="../images/park hwan hee.jpg" alt="Park Hwan Hee">
-            <p><strong>Park Hwan Hee</strong><br>Seo Ye Na<br><span>Support Role</span></p>
-        </div>
-    </div>
-</div>
-
-<!-- Embedded YouTube Video -->
-<div class="video-container">
-    <iframe width="914" height="514" 
-    src="https://www.youtube.com/embed/nORbLbrA5bA" 
-    title="ARE YOU HUMAN TOO? - OFFICIAL TRAILER | Seo Kang Joon, Gong Seung Yeon, Lee Joon Hyuk, Park Hwan Hee" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+    
+    <!-- Embedded YouTube Video -->
+    <div class="video-container">
+        <iframe width="914" height="514" 
+        src="https://www.youtube.com/embed/nORbLbrA5bA" 
+        title="ARE YOU HUMAN TOO? - OFFICIAL TRAILER | Seo Kang Joon, Gong Seung Yeon, Lee Joon Hyuk, Park Hwan Hee" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
 </div>
 
 <style>
@@ -130,7 +130,7 @@
         padding: 0;
         box-sizing: border-box;
     }
-
+    
     /* Parent container to center the video */
     .video-container {
         display: flex;
@@ -139,7 +139,7 @@
         min-height: 100vh;        /* Full viewport height */
         background-color: #ffffff;   /* Optional background for contrast */
     }
-
+    
     /* Optional: Make the iframe responsive */
     iframe {
         width: 640px;
@@ -147,7 +147,7 @@
         max-width: 50%;
         max-height: 50%;
     }
-</style>
+    </style>
 
 <!-- Gallery Section -->
 <div class="gallery">
@@ -169,3 +169,21 @@
     </div>
 </div>
 
+    <!-- Footer -->
+    <div class="footer">
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <img src="../images/logooo.png" width="64px">
+            <p>BingeVerse</p>
+            <p>&copy; 2024 All rights reserved.</p>
+        </div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="myweb_about.html">About</a>
+            <a href="contact_page.html">Contact Us</a>
+        </div>
+    </div>
+    <!-- Footer -->
+</body>
+</html>
